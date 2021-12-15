@@ -17,7 +17,7 @@ body {
   height: 300px;
 }
 
-#reset_scores, 
+#reset_scores,
 #add_scores {
   padding: 2rem;
   flex-wrap: wrap;
