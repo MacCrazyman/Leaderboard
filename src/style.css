@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+}
+
+.flex_container {
+  display: flex;
+}
+
+#score_table {
+  width: 100%;
+  border: 2px solid black;
+  height: 300px;
+}
+
+#reset_scores,
+#add_scores {
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex: 1 1;
+  gap: 1rem;
+}
+
+#reset_scores {
+  justify-content: space-between;
+}
+
+#add_scores {
+  width: fit-content;
+}
+
+#score_form {
+  width: fit-content;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
+.button {
+  width: fit-content;
+}
