@@ -12,7 +12,7 @@ jobs:
           npm install webpack webpack-cli
           npm install style-loader css-loader
           npm install html-webpack-plugin
-          npm run buil
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7
