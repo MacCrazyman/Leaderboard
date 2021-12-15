@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+}
+
+.flex_container {
+  display: flex;
+}
+
+#score_table {
+  width: 100%;
+  border: 2px solid black;
+}
+
+#reset_scores, 
+#add_scores {
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex: 1 1;
+  gap: 1rem;
+}
+
+#score_form {
+  gap: 1rem;
+}
+
+.flex_column {
+  flex-direction: column;
+}
