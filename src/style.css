@@ -13,14 +13,14 @@ header {
 }
 
 h1 {
-  font-family: var(--primary-font);
-  color: red;
   text-align: center;
   transform: rotateY(30deg)
   translate(-150px);
 }
 
 body {
+  color: red;
+  font-family: var(--primary-font);
   padding: 1rem;
   background-color: black;
 }
@@ -30,19 +30,23 @@ body {
 }
 
 #score_table {
-  font-family: var(--primary-font);
   font-size: 1.25rem;
   overflow-y: auto;
   width: 100%;
   border: 2px solid red ;
-  box-shadow: purple 20px 20px 20px;
+  box-shadow: #ff0080 20px 20px 20px;
   background-color: aqua;
   height: 300px;
   max-height: 200px;
   border-collapse: collapse;
+  color: black;
 }
 td {
   padding-inline: 2rem;
+}
+
+tr {
+  transition: transform 0.2s ease-in-out;
 }
 
 tr:nth-child(even) {
@@ -79,6 +83,20 @@ tr:nth-child(even) {
 
 .button {
   width: fit-content;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: #ff8000;
+  border: 2px solid red;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  color: white;
+  border-width: 4px;
+  border-radius: 10px;
 }
 
 tr:hover {
