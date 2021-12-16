@@ -1,6 +1,23 @@
+:root {
+  --primary-font: 'Bakbak One';
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+header {
+  padding: 1rem;
+  perspective: 14rem;
+}
+
+h1 {
+  font-family: var(--primary-font);
+  color: red;
+  text-align: center;
+  transform: rotateY(30deg)
+  translate(-150px);
 }
 
 body {
