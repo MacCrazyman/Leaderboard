@@ -1,12 +1,15 @@
 // imports
 import './style.css';
 import scoreLibrary from './manage_scores.js'
-// global variables
+import * as DOM from './dom_manipulation.js'
+// global variablesx
 const score = new scoreLibrary();
+// score[list].forEach((scoreData) => DOM.createScore(scoreData));
 // query selectors
 const scoreForm = document.querySelector('#score_form');
 const playerName = document.querySelector('#name_input');
 const playerScore = document.querySelector('#score_input');
+const refresButton = document.querySelector('#refresh_button');
 // functions
 
 // event listeners
@@ -19,5 +22,11 @@ scoreForm.addEventListener('submit', (event) => {
   score.send(newScore).then(() => {
     playerScore.value='';
     playerName.value='';
+  });
+})
+
+refresButton.addEventListener('click', (e) => {
+  score.list.forEach(element => {
+    DOM.createScore(element);
   });
 })
