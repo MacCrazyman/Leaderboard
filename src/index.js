@@ -10,6 +10,7 @@ const scoreForm = document.querySelector('#score_form');
 const playerName = document.querySelector('#name_input');
 const playerScore = document.querySelector('#score_input');
 const refresButton = document.querySelector('#refresh_button');
+const scoreTable = document.querySelector("#score_table");
 // functions
 
 // event listeners
@@ -26,6 +27,7 @@ scoreForm.addEventListener('submit', (event) => {
 })
 
 refresButton.addEventListener('click', (e) => {
+  scoreTable.innerHTML = '';
   score.list.forEach(element => {
     DOM.createScore(element);
   });
