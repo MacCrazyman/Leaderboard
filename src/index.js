@@ -1,17 +1,26 @@
 // imports
 import './style.css';
 import ScoreLibrary from './manage_scores.js';
-import * as DOM from './dom_manipulation.js';
+import createScore from './dom_manipulation.js';
 // global variablesx
 const score = new ScoreLibrary();
-// score[list].forEach((scoreData) => DOM.createScore(scoreData));
+
 // query selectors
 const scoreForm = document.querySelector('#score_form');
 const playerName = document.querySelector('#name_input');
 const playerScore = document.querySelector('#score_input');
 const refresButton = document.querySelector('#refresh_button');
 const scoreTable = document.querySelector('#score_table');
+
 // functions
+const reloadTable = () => {
+  scoreTable.innerHTML = '';
+  score.get().then(() => {
+    score.list.forEach((element) => {
+      createScore(element);
+    });
+  });
+}
 
 // event listeners
 scoreForm.addEventListener('submit', (event) => {
@@ -23,14 +32,10 @@ scoreForm.addEventListener('submit', (event) => {
   score.send(newScore).then(() => {
     playerScore.value = '';
     playerName.value = '';
+    createScore(newScore);
   });
 });
 
-refresButton.addEventListener('click', () => {
-  scoreTable.innerHTML = '';
-  score.get().then(() => {
-    score.list.forEach((element) => {
-      DOM.createScore(element);
-    });
-  });
-});
+refresButton.addEventListener('click', reloadTable);
+
+window.onload = () => reloadTable();

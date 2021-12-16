@@ -15,4 +15,4 @@ const createScore = (scoreData) => {
   scoreTable.appendChild(tableRow);
 };
 
-module.exports = { createScore };
+export default createScore;
