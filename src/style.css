@@ -1,5 +1,5 @@
 :root {
-  --primary-font: 'Bakbak One';
+  --primary-font: 'Bakbak One',sans-serif;
 }
 
 * {
@@ -29,9 +29,15 @@ body {
 }
 
 #score_table {
+  font-family: var(--primary-font);
+  font-size: 1.25rem;
+  overflow-y: auto;
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid red ;
+  box-shadow: purple 5px 5px 5px;
+  background-color: aqua;
   height: 300px;
+  max-height: 200px;
 }
 
 #reset_scores,
