@@ -80,3 +80,10 @@ tr:nth-child(even) {
 .button {
   width: fit-content;
 }
+
+tr:hover {
+  transform: scale(1.1);
+  color: white;
+  font-weight: bold;
+  background-color: purple;
+}
