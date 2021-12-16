@@ -1,7 +1,7 @@
 // variables
-const scoreTable = document.querySelector("#score_table");
+const scoreTable = document.querySelector('#score_table');
 // functions
-export const createScore = (scoreData) => {
+const createScore = (scoreData) => {
   // create elements
   const tableRow = document.createElement('tr');
   const tableName = document.createElement('td');
@@ -13,4 +13,6 @@ export const createScore = (scoreData) => {
   tableRow.appendChild(tableName);
   tableRow.appendChild(tableScore);
   scoreTable.appendChild(tableRow);
-}
+};
+
+module.exports = { createScore };
