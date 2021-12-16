@@ -12,7 +12,7 @@
     <!-- Scores table section -->
     <section id="reset_scores" class="flex_container">
       <h2>Reset scores</h2>
-      <button type="button" class="button">Refresh</button>
+      <button id="refresh_button" type="button" class="button">Refresh</button>
       <table id="score_table"></table>
     </section>
     <!-- New scores section -->
@@ -20,7 +20,7 @@
       <h2>Add your score</h2>
       <form class="flex_container flex_column" id="score_form" action="#">
         <input id="name_input" placeholder="Your name" type="text" required>
-        <input id="score_input" placeholder="Your score" type="text" required>
+        <input id="score_input" placeholder="Your score" type="number" required>
         <button class="button" type="submit">Submit</button>
       </form>
     </section>
