@@ -34,8 +34,22 @@ To get a local copy up and running follow these simple example steps.
     git clone https://github.com/MacCrazyman/Leaderboard.git
     ````
 
+### Install
+* In your consle, run the following command to install the required dependencies:
+    ````
+    npm install
+    ````
+
+
 ### Usage
-* Open the [index](./src/index.html) file with your browser to see the webpage.
+* You can build the files using webpack to generate a `/dist` folder with distribution:
+    ````
+    npm run build
+    ````
+* Run webpack server to see the webpage working:
+    ````
+    npm run start
+    ````
 * You can also open the [GitHub pages deployment](https://maccrazyman.github.io/Leaderboard) to see a live version of the webpage.
 
 

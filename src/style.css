@@ -1,20 +1,98 @@
+::-webkit-scrollbar {
+  background-color: var(--color-primary);
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+  border-radius: 6px;
+}
+
+:root {
+  --primary-font: 'Bakbak One', sans-serif;
+  --color-primary: #288fb4;
+  --color-secondary: #1d556f;
+  --color-terciary: #efddb2;
+  --color-fourth: #eaeaea;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
+header {
   padding: 1rem;
+  perspective: 14rem;
+}
+
+h1 {
+  text-align: center;
+  transform:
+    rotateY(30deg)
+    translate(-150px);
+}
+
+input {
+  border: 2px solid var(--color-secondary);
+  border-radius: 5px;
+  height: 2rem;
+  padding: 0.25rem;
+  background-color: var(--color-terciary);
+  color: #1d556f;
+  font-weight: 800;
+}
+
+input:focus-visible {
+  box-shadow: 5px 5px 0 var(--color-primary), -5px -5px 0 var(--color-primary);
+}
+
+.shadow_text {
+  text-shadow: 2px 2px 0 #fa360a, -2px -2px 0 #fa360a;
+}
+
+body {
+  color: var(--color-primary);
+  font-family: var(--primary-font);
+  padding: 1rem;
+  background-color: var(--color-fourth);
 }
 
 .flex_container {
   display: flex;
 }
 
-#score_table {
+.table_wrapper {
+  max-height: 400px;
+  overflow-y: auto;
   width: 100%;
-  border: 2px solid black;
+  overflow-x: hidden;
+}
+
+#score_table {
+  font-size: 1.25rem;
+  width: 100%;
+  border: 2px solid var(--color-primary);
+  box-shadow: #888 20px 20px 20px;
+  background-color: var(--color-terciary);
   height: 300px;
+  max-height: 200px;
+  border-collapse: collapse;
+  color: black;
+}
+
+td {
+  padding-inline: 2rem;
+}
+
+tr {
+  transition: transform 0.2s ease-in-out;
+}
+
+tr:nth-child(even) {
+  background-color: #fa360a;
+  color: white;
+  margin: 0;
 }
 
 #reset_scores,
@@ -45,4 +123,25 @@ body {
 
 .button {
   width: fit-content;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+  background-color: var(--color-secondary);
+  border: 2px solid red;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+tr:hover {
+  transform: scale(1.1);
+  color: white;
+  font-weight: bold;
+  background-color: var(--color-secondary);
 }
