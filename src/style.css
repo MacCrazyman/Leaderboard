@@ -22,6 +22,20 @@ h1 {
   translate(-150px);
 }
 
+input {
+  border: 2px solid var(--color-secondary);
+  border-radius: 5px;
+  height: 2rem;
+  padding: 0.25rem;
+  background-color: var(--color-terciary);
+  color: #1d556f;
+  font-weight: 800;
+}
+
+input:focus-visible {
+  box-shadow: 5px 5px 0 var(--color-primary), -5px -5px 0 var(--color-primary);
+}
+
 .shadow_text {
   text-shadow: 2px 2px 0 #fa360a, -2px -2px 0 #fa360a;
 }
@@ -37,9 +51,15 @@ body {
   display: flex;
 }
 
+.table_wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 #score_table {
   font-size: 1.25rem;
-  overflow-y: auto;
   width: 100%;
   border: 2px solid var(--color-primary) ;
   box-shadow: #888888 20px 20px 20px;
