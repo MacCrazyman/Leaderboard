@@ -17,7 +17,7 @@ const reloadTable = () => {
   scoreTable.innerHTML = '';
   score.get().then((json) => {
     score.list = json.result;
-    score.list.sort((prev,next) => next.score - prev.score)
+    score.list.sort((prev, next) => next.score - prev.score);
     score.list.forEach((element) => {
       createScore(element);
     });
@@ -31,7 +31,7 @@ scoreForm.addEventListener('submit', async (event) => {
     user: playerName.value,
     score: playerScore.value,
   };
-   score.send(newScore).then(() => {
+  score.send(newScore).then(() => {
     playerScore.value = '';
     playerName.value = '';
     reloadTable();
