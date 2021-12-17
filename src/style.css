@@ -134,3 +134,13 @@ tr:hover {
   font-weight: bold;
   background-color: var(--color-secondary);
 }
+
+::-webkit-scrollbar {
+  background-color: var(--color-primary);
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+  border-radius: 6px;
+}
