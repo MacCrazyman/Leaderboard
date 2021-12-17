@@ -1,5 +1,9 @@
 :root {
   --primary-font: 'Bakbak One',sans-serif;
+  --color-primary: #288fb4;
+  --color-secondary: #1d556f;
+  --color-terciary: #efddb2;
+  --color-fourth: #eaeaea;
 }
 
 * {
@@ -18,11 +22,15 @@ h1 {
   translate(-150px);
 }
 
+.shadow_text {
+  text-shadow: 2px 2px 0 #fa360a, -2px -2px 0 #fa360a;
+}
+
 body {
-  color: red;
+  color: var(--color-primary);
   font-family: var(--primary-font);
   padding: 1rem;
-  background-color: black;
+  background-color: var(--color-fourth);
 }
 
 .flex_container {
@@ -33,9 +41,9 @@ body {
   font-size: 1.25rem;
   overflow-y: auto;
   width: 100%;
-  border: 2px solid red ;
-  box-shadow: #ff0080 20px 20px 20px;
-  background-color: aqua;
+  border: 2px solid var(--color-primary) ;
+  box-shadow: #888888 20px 20px 20px;
+  background-color: var(--color-terciary);
   height: 300px;
   max-height: 200px;
   border-collapse: collapse;
@@ -50,7 +58,7 @@ tr {
 }
 
 tr:nth-child(even) {
-  background-color: blue;
+  background-color: #fa360a;
   color: white;
   margin: 0;
 }
@@ -86,22 +94,23 @@ tr:nth-child(even) {
   padding: 10px;
   font-weight: bold;
   font-size: 1em;
-  background-color: #ff8000;
+  color: white;
+  background-color: var(--color-secondary);
   border: 2px solid red;
   border-radius: 5px;
   transition: transform 0.2s ease-in-out;
 }
 
+
 .button:hover {
-  transform: scale(1.2);
-  color: white;
-  border-width: 4px;
-  border-radius: 10px;
+  transform: scale(1.05);
+  font-size: 1.05em;
+  cursor: pointer;
 }
 
 tr:hover {
   transform: scale(1.1);
   color: white;
   font-weight: bold;
-  background-color: purple;
+  background-color: var(--color-secondary);
 }

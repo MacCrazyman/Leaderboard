@@ -10,12 +10,12 @@
   <title>Leaderboard</title>
 </head>
 <body>
-  <header><h1>Leaderboard</h1></header>
+  <header><h1 class="shadow_text">Leaderboard</h1></header>
   <main class="flex_container">
     <!-- Scores table section -->
     <section id="reset_scores" class="flex_container">
       <h2>Reset scores</h2>
-      <button id="refresh_button" type="button" class="button">Refresh</button>
+      <button id="refresh_button" type="button" class="button">Refresh <span class="reload_icon">&#128472;</span></button>
       <table id="score_table"></table>
     </section>
     <!-- New scores section -->
@@ -24,7 +24,7 @@
       <form class="flex_container flex_column" id="score_form" action="#">
         <input id="name_input" placeholder="Your name" type="text" required>
         <input id="score_input" placeholder="Your score" type="number" required>
-        <button class="button" type="submit">Submit</button>
+        <button class="button" type="submit">Submit <span class="submit_icon">&#187;</span></button>
       </form>
     </section>
   </main>
