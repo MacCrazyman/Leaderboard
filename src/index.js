@@ -20,7 +20,7 @@ const reloadTable = () => {
       createScore(element);
     });
   });
-}
+};
 
 // event listeners
 scoreForm.addEventListener('submit', (event) => {
