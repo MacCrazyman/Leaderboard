@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
   <title>Leaderboard</title>
 <script defer src="index.bundle.js"></script></head>
 <body>
-  <header><h1>Leaderboard</h1></header>
+  <header><h1 class="shadow_text">Leaderboard</h1></header>
   <main class="flex_container">
     <!-- Scores table section -->
     <section id="reset_scores" class="flex_container">
       <h2>Reset scores</h2>
-      <button id="refresh_button" type="button" class="button">Refresh</button>
-      <table id="score_table"></table>
+      <button id="refresh_button" type="button" class="button">Refresh <span class="reload_icon">&#128472;</span></button>
+      <div class="table_wrapper">
+        <table id="score_table"></table>
+      </div>
     </section>
     <!-- New scores section -->
     <section id="add_scores" class="flex_container flex_column">
@@ -21,7 +26,7 @@
       <form class="flex_container flex_column" id="score_form" action="#">
         <input id="name_input" placeholder="Your name" type="text" required>
         <input id="score_input" placeholder="Your score" type="number" required>
-        <button class="button" type="submit">Submit</button>
+        <button class="button" type="submit">Submit <span class="submit_icon">&#187;</span></button>
       </form>
     </section>
   </main>
