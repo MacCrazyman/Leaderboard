@@ -4,17 +4,22 @@ export default class ScoreLybrary {
   }
 
   get = async () => {
-    fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/th5xBYWSs5VtsOmKTkPd/scores/').then((response) => response.json())
-      .then((json) => {
-        this.list = json.result;
-      });
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/th5xBYWSs5VtsOmKTkPd/scores/')
+    
+    return response.json()
+      // .then((json) => {
+      //   this.list = json.result;
+      //   this.list.sort((prev,next) => next.score - prev.score)
+      // });
   }
 
   send = async (newScore) => {
-    fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/th5xBYWSs5VtsOmKTkPd/scores/', {
+   const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/th5xBYWSs5VtsOmKTkPd/scores/', {
       method: 'POST',
       body: JSON.stringify(newScore),
       headers: { 'Content-type': 'application/json; charset=UTF-8' },
     });
+
+    return response.json()
   }
 }

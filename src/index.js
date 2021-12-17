@@ -15,7 +15,9 @@ const scoreTable = document.querySelector('#score_table');
 // functions
 const reloadTable = () => {
   scoreTable.innerHTML = '';
-  score.get().then(() => {
+  score.get().then((json) => {
+    score.list = json.result;
+    score.list.sort((prev,next) => next.score - prev.score)
     score.list.forEach((element) => {
       createScore(element);
     });
@@ -23,16 +25,16 @@ const reloadTable = () => {
 };
 
 // event listeners
-scoreForm.addEventListener('submit', (event) => {
+scoreForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const newScore = {
     user: playerName.value,
     score: playerScore.value,
   };
-  score.send(newScore).then(() => {
+   score.send(newScore).then(() => {
     playerScore.value = '';
     playerName.value = '';
-    createScore(newScore);
+    reloadTable();
   });
 });
 
